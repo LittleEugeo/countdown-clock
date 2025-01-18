@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px;
+    background-color: hsl(210, 18%, 93%);
+}
+
+.wrapper {
+    width: clamp(340px, 100%, 1400px);
+    min-height: 600px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #0002;
+    background-color: hsl(206, 33%, 96%);
+}
+
+.wrapper__image {
+    display: flex;
+    min-height: 70%;
+    box-shadow: 0px 0px 5px #0003;
+    border-radius: 2px;
+}
+
+.image {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.wrapper__information {
+    min-height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.title {
+    font-size: clamp(1.1rem, 5vw, 2.5rem);
+    margin-bottom: 5px;
+    color: #1a6aa2;
+    text-wrap: balance;
+    letter-spacing: 3px;
+}
+
+.subtitle {
+    letter-spacing: 3px;
+    font-size: 17px;
+    text-wrap: balance;
+    font-weight: bold;
+}
+
+.paragraph {
+    line-height: 27px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-align: justify;
+    text-wrap: balance;
+    color: #868e95;
+}
+
+.information__countdown {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    user-select: none;
+}
+
+.time {
+    min-width: 90px;
+    min-height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    color: #fff;
+    background-color: #102b42;
+    box-shadow: 0px 0px 5px #0006;
+}
+
+#days, #hours, #minutes, #seconds {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.time__info {
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+/* START OF MEDIA QUERYS SECTION */
+
+@media screen and (max-width: 940px) {
+    .information__countdown {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .information__countdown {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .title {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .subtitle {
+        text-align: justify;
+    }
+}
+
+/* END OF MEDIA QUERYS SECTION */
